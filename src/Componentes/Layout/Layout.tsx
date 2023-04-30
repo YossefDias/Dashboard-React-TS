@@ -1,26 +1,26 @@
-import React from "react";
+import React from 'react';
 
-import Header from './Header.ts';
-import Footer from './Footer.ts';
-import Sidebar from './Sidebar.ts';
+import Header from './Header/Header';
+import Sidebar from './Sidebar/Sidebar';
+import Footer from './Footer/Footer';
 
-import Styles from "./Layout.module.css"
+import styles from './Layout.module.css';
 
 interface LayoutProps {
     children: React.ReactNode;
-}
+    }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
-        <div className={Styles.container}>
+        <div className={styles.container}>
             <Header />
-            <div className={Styles.main}>
-                <Sidebar />
-                <div className={Styles.content}><{children}</div>
-            </div>
+            <div className={styles.main}>
+            <Sidebar /> 
+            <div className={styles.content}>{children}</div>
+            </div>            
             <Footer />
         </div>
-    );  
-}
+    );
+};
 
 export default Layout;

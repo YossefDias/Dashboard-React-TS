@@ -1,11 +1,11 @@
-import React from "react";
-import Styles from "./Footer.modules.css";
+import React from 'react';
+import styles from './Footer.module.css';
 
-function Footer () {
-
+const Footer: React.FC = () => {
     return (
-        <footer>Designer by José Dias</footer>
-    )
-}
-
-export default Footer
+        <footer className= {styles.footer}>
+            <p>&copy; {new Date().getFullYear()} Dasboard do meu site pessoal. Todos os direitos reservados.</p>
+        </footer>
+    );
+};
+export default Footer;
