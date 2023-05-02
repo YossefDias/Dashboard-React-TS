@@ -30,6 +30,11 @@ const CadastrarInfconst CadastrarInformacoes: React.FC = () =>{
 
     })
 
+    // function onSubmit (values: FormValues, {resetForm}: {resetForm: () => void}) {
+    //     // logica de envio para backend
+    //     console.log('Formulário enviado com sucesso');
+    // }
+
     const onSubmit = (values: FormValues, {resetForm} : {resetForm: () => void }) => {
         //logica de envio para backend
         console.log (values);
@@ -40,34 +45,56 @@ const CadastrarInfconst CadastrarInformacoes: React.FC = () =>{
     
     return (
         <div className={styles.formWrapper}>
+            <Formik initialValues={inicialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
+            <Form className={styles.form}>
 
-                <form action=""className={styles.form}>
+                {/* <form action=""className={styles.form}> */}
                     
                 <h2 className={styles.title}>Imformações Pessoais</h2>
 
                     <fieldset className={styles.formGroup}>
                         <label htmlFor="foto" className={styles.label}>Foto</label>
-                        <input type="text" name="foto" id="foto" className={styles.input}/>
+                        <Field
+                         type= "text"
+                         id= "foto"
+                         name= "foto" className={styles.input}
+                         />
                     </fieldset>
 
                     <fieldset className={styles.formGroup}>
                         <label htmlFor="nome" className={styles.label}>None</label>
-                        <input type="text" name="nome" id="nome" className={styles.input}/>
+                        {/* <input type="text" name="nome" id="nome" className={styles.input}/> */}
+                        <Field  
+                        type= "text"
+                        id= "nome"
+                        name= "nome" className={styles.input}
+                        />
                     </fieldset>
 
                     <fieldset className={styles.formGroup}>
                         <label htmlFor="cargo" className={styles.label}>Cargo</label>
-                        <input type="text" name="cargo" id="cargo" className={styles.input}/>
+                        {/* <input type="text" name="cargo" id="cargo" className={styles.input}/> */}
+                        <Field
+                        type= "text"
+                        id= "cargo"
+                        name= "cargo" className={styles.input}
+                        />
                     </fieldset>
 
                     <fieldset className={styles.formGroup}>
                         <label htmlFor="resumo" className={styles.label}>Resumo</label>
-                        <textarea name="resumo" id="resumo" className={styles.textarea}></textarea>
+                        {/* <textarea name="resumo" id="resumo" className={styles.textarea}></textarea> */}
+                        <Field
+                        type= "text"
+                        id= "resumo"
+                        name= "resumo" className={styles.input}
+                        />
                     </fieldset>
 
-                </form>
+                </Form>
+            </Formik>
                  
             </div>
     );
-};
+// };
 export default CadastrarInformacoes;
