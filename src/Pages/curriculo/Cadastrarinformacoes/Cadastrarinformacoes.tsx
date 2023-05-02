@@ -13,20 +13,20 @@ interface FormValues {
     resumo: string;
 }
 
-const CadastrarInfconst CadastrarInformacoes: React.FC = () =>{
+const CadastrarInformacoes: React.FC = () =>{
 
-    const inicialValues: FormValues {
-        foto: '';
-        nome: '';
-        cargo: '';
-        resumo: '';
+    const inicialValues: FormValues = {
+        foto: '',
+        nome: '',
+        cargo: '',
+        resumo: '',
     };
 
-    constValidationScheme = Yup.object().shape({
-        foto: yup.string().required('Campo obrigatório'),
-        nome: yup.string().required('Campo obrigatório'),
-        cargo: yup.string().required('Campo obrigatório'),
-        resumo: yup.string().required('Campo obrigatório'),
+    const validationScheme = Yup.object().shape({
+        foto: Yup.string().required('Campo obrigatório'),
+        nome: Yup.string().required('Campo obrigatório'),
+        cargo: Yup.string().required('Campo obrigatório'),
+        resumo: Yup.string().required('Campo obrigatório'),
 
     })
 
@@ -45,10 +45,11 @@ const CadastrarInfconst CadastrarInformacoes: React.FC = () =>{
     
     return (
         <div className={styles.formWrapper}>
-            <Formik initialValues={inicialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
+            <Formik initialValues={inicialValues} validationSchema={validationScheme} onSubmit={onSubmit}>
+            {({ errors, touched }) => (
+                
             <Form className={styles.form}>
 
-                {/* <form action=""className={styles.form}> */}
                     
                 <h2 className={styles.title}>Imformações Pessoais</h2>
 
@@ -57,8 +58,10 @@ const CadastrarInfconst CadastrarInformacoes: React.FC = () =>{
                         <Field
                          type= "text"
                          id= "foto"
-                         name= "foto" className={styles.input}
+                         name= "foto" 
+                         className={`${styles.input} ${touched.foto && errors.foto && styles.error}`}
                          />
+                        <ErrorMessage name="foto" component="div" className={styles.error}/>
                     </fieldset>
 
                     <fieldset className={styles.formGroup}>
@@ -67,8 +70,10 @@ const CadastrarInfconst CadastrarInformacoes: React.FC = () =>{
                         <Field  
                         type= "text"
                         id= "nome"
-                        name= "nome" className={styles.input}
+                        name= "nome" 
+                        className={`${styles.input} ${touched.foto && errors.foto && styles.error}`}
                         />
+                        <ErrorMessage name="nome" component="div" className={styles.error}/>
                     </fieldset>
 
                     <fieldset className={styles.formGroup}>
@@ -77,8 +82,10 @@ const CadastrarInfconst CadastrarInformacoes: React.FC = () =>{
                         <Field
                         type= "text"
                         id= "cargo"
-                        name= "cargo" className={styles.input}
+                        name= "cargo" 
+                        className={`${styles.input} ${touched.foto && errors.foto && styles.error}`}
                         />
+                        <ErrorMessage name="cargo" component="div" className={styles.error}/>
                     </fieldset>
 
                     <fieldset className={styles.formGroup}>
@@ -87,14 +94,22 @@ const CadastrarInfconst CadastrarInformacoes: React.FC = () =>{
                         <Field
                         type= "text"
                         id= "resumo"
-                        name= "resumo" className={styles.input}
+                        name= "resumo" 
+                        className={`${styles.input} ${touched.foto && errors.foto && styles.error}`}
                         />
+                        <ErrorMessage name="resumo" component="div" className={styles.error}/>
                     </fieldset>
 
+                    <button type="submit" className={styles.button}>Salvar</button>
+
                 </Form>
+            )}
             </Formik>
+
+            
                  
             </div>
     );
-// };
+};
+
 export default CadastrarInformacoes;

@@ -50,3 +50,23 @@
         background-color: #ffffff;
         margin-top: 5px;
     }
+
+    .button {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #005fa3;
+        color: #ffffff;
+        margin-top: 5px;
+    }
+
+    .button:hover {
+        background-color: #005fa3;
+    }
+
+    .ErrorMsg {
+        color: red;
+        font-size: 12px;
+        margin-top: 5px;
+        font-size: bold;
+    }

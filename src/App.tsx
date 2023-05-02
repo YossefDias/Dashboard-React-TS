@@ -3,9 +3,9 @@ import React from 'react';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Layout from './components/Layout/Layout';
-import Home from './pages/Home';
-import CadastrarInformacoes from './pages/Curriculo/CadastrarInformacoes';
+import {Layout} from './Componentes/Layout';
+import Home from './Pages/home';
+import CadastrarInformacoes from './Pages/curriculo/Cadastrarinformacoes';
  
 const App: React.FC = () => {
   return (
