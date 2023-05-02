@@ -83,7 +83,7 @@ const CadastrarInformacoes: React.FC = () =>{
                         type= "text"
                         id= "cargo"
                         name= "cargo" 
-                        className={`${styles.input} ${touched.foto && errors.foto && styles.error}`}
+                        className={`${styles.input} ${touched.cargo && errors.cargo && styles.error}`}
                         />
                         <ErrorMessage name="cargo" component="div" className={styles.error}/>
                     </fieldset>
@@ -95,7 +95,7 @@ const CadastrarInformacoes: React.FC = () =>{
                         type= "text"
                         id= "resumo"
                         name= "resumo" 
-                        className={`${styles.input} ${touched.foto && errors.foto && styles.error}`}
+                        className={`${styles.input} ${touched.resumo && errors.resumo && styles.error}`}
                         />
                         <ErrorMessage name="resumo" component="div" className={styles.error}/>
                     </fieldset>
