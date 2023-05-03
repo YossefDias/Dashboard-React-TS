@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 import styles from "./CadastrarInformacoes.module.css";
+import Input from "../../../Componentes/forms/Imput/Input";
 
 interface FormValues {
     foto: string;
@@ -53,53 +54,28 @@ const CadastrarInformacoes: React.FC = () =>{
                     
                 <h2 className={styles.title}>Imformações Pessoais</h2>
 
-                    <fieldset className={styles.formGroup}>
-                        <label htmlFor="foto" className={styles.label}>Foto</label>
-                        <Field
-                         type= "text"
-                         id= "foto"
-                         name= "foto" 
-                         className={`${styles.input} ${touched.foto && errors.foto && styles.error}`}
-                         />
-                        <ErrorMessage name="foto" component="div" className={styles.error}/>
-                    </fieldset>
+                    <Input
+                    label="Foto"
+                    name="foto"
+                    errors={errors.foto}
+                    touched={touched.foto}
+                    />
 
-                    <fieldset className={styles.formGroup}>
-                        <label htmlFor="nome" className={styles.label}>None</label>
-                        {/* <input type="text" name="nome" id="nome" className={styles.input}/> */}
-                        <Field  
-                        type= "text"
-                        id= "nome"
-                        name= "nome" 
-                        className={`${styles.input} ${touched.foto && errors.foto && styles.error}`}
-                        />
-                        <ErrorMessage name="nome" component="div" className={styles.error}/>
-                    </fieldset>
-
-                    <fieldset className={styles.formGroup}>
-                        <label htmlFor="cargo" className={styles.label}>Cargo</label>
-                        {/* <input type="text" name="cargo" id="cargo" className={styles.input}/> */}
-                        <Field
-                        type= "text"
-                        id= "cargo"
-                        name= "cargo" 
-                        className={`${styles.input} ${touched.cargo && errors.cargo && styles.error}`}
-                        />
-                        <ErrorMessage name="cargo" component="div" className={styles.error}/>
-                    </fieldset>
-
-                    <fieldset className={styles.formGroup}>
-                        <label htmlFor="resumo" className={styles.label}>Resumo</label>
-                        {/* <textarea name="resumo" id="resumo" className={styles.textarea}></textarea> */}
-                        <Field
-                        type= "text"
-                        id= "resumo"
-                        name= "resumo" 
-                        className={`${styles.input} ${touched.resumo && errors.resumo && styles.error}`}
-                        />
-                        <ErrorMessage name="resumo" component="div" className={styles.error}/>
-                    </fieldset>
-
+                    <Input
+                    label="Nome"
+                    name="nome"
+                    errors={errors.nome}
+                    touched={touched.nome}
+                    />
+                    
+                    <Input
+                    label="Cargo"
+                    name="cargo"
+                    errors={errors.cargo}
+                    touched={touched.cargo}
+                    />
+                   
+                   
                     <button type="submit" className={styles.button}>Salvar</button>
 
                 </Form>
