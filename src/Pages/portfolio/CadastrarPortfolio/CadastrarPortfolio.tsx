@@ -2,7 +2,7 @@ import { Formik, Form } from "formik";
 import styles from "./CadastrarPortfolio.module.css";
 
 import * as Yup from "yup";
-import Input from "../../../components/forms/Input";
+import Input from "../../../Componentes/forms/Input/Input";
 
 interface FormValues {
    link: string;

@@ -9,7 +9,9 @@ import CadastrarExperiencia from './Pages/curriculo/Cadastrarexperiencias/Cadast
 import CadastrarPortfolio from './Pages/portfolio/CadastrarPortfolio/CadastrarPortfolio';
 import CadastrarInformacoes from './Pages/curriculo/Cadastrarinformacoes/CadastrarInformacoes';
 import ListaPortfolio from './Pages/portfolio/ListaPortfolio/ListaPortfolio';
-import ListaExperiencia from './Pages/curriculo/Listaexperiencias/ListaExperiencias';
+import ListaExperiencia from './Pages/curriculo/Listaexperiencia/ListaExperiencias';
+import Input from './Componentes/forms/Input/Input';
+
 const App: React.FC = () => {
   return (
     <BrowserRouter>
@@ -20,7 +22,7 @@ const App: React.FC = () => {
                <Route path="/curriculo/experiencia/cadastro" element={<CadastrarExperiencia />} />
                <Route path="/portfolio/listagem" element={<ListaPortfolio />} />
                <Route path="/portfolio/cadastro" element={<CadastrarPortfolio />} />
-               <Route path="/curriculo/ListaExperiencias/ListaExperiencias" element={<ListaExperiencias />} />
+               <Route path="/curriculo/ListaExperiencias/ListaExperiencia" element={<ListaExperiencia />} />
             </Routes>
          </Layout>
       </BrowserRouter>
