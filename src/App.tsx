@@ -5,8 +5,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import {Layout} from './Componentes/Layout';
 import Home from './Pages/home';
-import CadastrarInformacoes from './Pages/curriculo/Cadastrarinformacoes';
- 
+import CadastrarPortfolio from './Pages/portfolio/CadastrarPortfolio/CadastrarPortfolio';
+import CadastrarInformacoes from './Pages/curriculo/Cadastrarinformacoes/CadastrarInformacoes';
+import ListaPortfolio from './Pages/portfolio/ListaPortfolio/ListaPortfolio';
 const App: React.FC = () => {
   return (
     <BrowserRouter>

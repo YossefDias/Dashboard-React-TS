@@ -1,0 +1,30 @@
+{
+    "informacoes": [
+      {
+        "id": 1,
+        "foto": "https://github.com/YossefDias",
+        "nome": "José Dias",
+        "cargo": "Software Engineer",
+        "resumo": "Aprendendo."
+      }
+    ],
+    "experiencias": [
+      {
+        "id": 1,
+        "titulo": "Densevolver de Software",
+        "descricao": "Fullstack Developer.",
+        "tipo": "Junior",
+        "anoInicio": "2019",
+        "anoFim": "2022"
+      },
+      {
+        "id": 2,
+        "titulo": "Curso voltado a backend",
+        "descricao": "Programador.",
+        "tipo": "academico",
+        "anoInicio": "2019",
+        "anoFim": "2022"
+      }
+    ],
+    "portfolio": []
+  }

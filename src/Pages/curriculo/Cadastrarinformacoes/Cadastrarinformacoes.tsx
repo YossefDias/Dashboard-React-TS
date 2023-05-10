@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 import styles from "./CadastrarInformacoes.module.css";
-import Input from "../../../Componentes/forms/Imput/Input";
+import Input from "../../../Componentes/forms/Input/Input";
 
 interface FormValues {
     foto: string;
