@@ -3,7 +3,7 @@ import styles from "./CadastrarPortfolio.module.css";
 
 import * as Yup from "yup";
 import Input from "../../../Componentes/forms/Input/Input";
-
+import React from "react";
 interface FormValues {
    link: string;
    image: string;
